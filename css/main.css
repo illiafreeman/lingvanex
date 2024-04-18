@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  color: var(--black);
   margin: 0;
 }
 
@@ -108,6 +108,9 @@ table td {
 
 :root {
   --font-family: "Inter", sans-serif;
+  --second-family: "Manrope", sans-serif;
+  --black: #000;
+  --black-80: rgba(42, 43, 47, 0.8);
   --transition: all 0.2s ease-in-out;
   --transition05: all 0.5s ease-in-out;
 }
@@ -121,16 +124,15 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  color: #fff;
+  color: var(--black-80);
   font-weight: 400;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.4;
   padding: 0;
   margin: 0;
   flex-direction: column;
-  background: linear-gradient(153deg, #36603E 35.82%, #1E262C 107.75%), #386641;
+  background: #fff;
   font-family: var(--font-family);
-  font-variant-numeric: lining-nums proportional-nums;
 }
 
 .oh {
