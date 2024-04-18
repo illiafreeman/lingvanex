@@ -199,10 +199,15 @@ header p strong {
   font-weight: 700;
   letter-spacing: -0.01em;
   font-size: 40px;
-  line-height: 120%;
+  line-height: 100%;
+}
+header p strong span {
+  font-size: 24px;
+  font-weight: 300;
 }
 header p span {
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 200;
 }
 header ul {
   display: flex;
@@ -260,7 +265,6 @@ header ul li a:hover:before {
 .intro__desc {
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 18px;
   letter-spacing: -0.01em;
   color: var(--black-80);
   max-width: 680px;
@@ -334,6 +338,10 @@ header ul li a:hover:before {
   display: block;
   padding: 24px 16px 16px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .solution__title {
   font-size: 34px;
@@ -2153,5 +2161,10 @@ header ul li a:hover:before {
 @media only screen and (max-width: 1280px) {
   .main:before, .main:after {
     display: none;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 60px;
   }
 }/*# sourceMappingURL=main.css.map */
