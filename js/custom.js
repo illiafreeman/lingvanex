@@ -1,88 +1,46 @@
-/*mobile menu*/
-$('.header__menu-btn').click(function () {
-    $('.header__nav-wrap').toggleClass('vis');
-    $('body').toggleClass('oh open-menu');
-    $('.hamburger').toggleClass('open');
-});
-/*end mobile menu*/
+/*tabs*/
+    let ths = $('.tab');
+    ths.find('.tab__item').not(':first').hide();
+    ths.find('.tab__btn').click(function () {
+        ths.find('.tab__btn').removeClass('act').eq($(this).index()).addClass('act');
+        ths.find('.tab__item').hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass('act');
+/*end tabs*/
+
+/*header*/
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var navbarHeight = $('header').outerHeight();
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+        if (st > lastScrollTop && st > navbarHeight){
+            $('header').removeClass('vis').addClass('unvis');
+        } else {
+            if(st + $(window).height() < $(document).height()) {
+                $('header').removeClass('unvis').addClass('vis');
+            }
+        }
+        lastScrollTop = st;
+    }
+/*end header*/
 
 /*animation*/
-    new WOW().init();
+    if ($(window).width() >= 1025) {
+        new WOW().init();
+    }
 /*end animation*/
-
-/*currency toggle*/
-$('[data-cur="cur"]').click(function () {
-    $('[data-cur="cur"]').toggleClass('dol rub');
-    $('[data-cur="cur"]').each(function (index, value){
-        $(this).hasClass('dol') ? ($(this).html('$')) : ($(this).html('₽'));
-    });
-    $('[data-cost="cost"]').each(function (index, value){
-        $(this).toggleClass('dol rub');
-        let cost = $(this).html();
-        if($(this).hasClass('dol')){
-            $(this).html(Math.round(cost/90));
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 500,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        }else{
-            $(this).html(Math.round(cost*90));
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 500,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        }
-    });
-});
-/*end currency toggle*/
-
-/*period toggle*/
-$('[data-per="per"]').click(function () {
-    $('[data-per="per"]').toggleClass('mon day');
-    $('[data-per="per"]').each(function (index, value){
-        $(this).hasClass('mon') ? ($(this).html('month')) : ($(this).html('day'));
-    });
-    $('[data-cost="cost"]').each(function (index, value){
-        $(this).toggleClass('mon day');
-        let cost = $(this).html();
-        if($(this).hasClass('mon')){
-            $(this).html(Math.round(cost/30));
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 500,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        }else{
-            $(this).html(Math.round(cost*30));
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 500,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        }
-    });
-});
-
-/*end period toggle*/
-
 
 
 
