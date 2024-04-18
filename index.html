@@ -41,51 +41,53 @@
         <div class="container">
             <article class="article intro">
                 <h1>Travel and Hospitality</h1>
-                <h4>Offline & Online Translation: image translation, translation history, file translation, bookmarks, dictionary meaning.</h4>
+                <h4 class="intro__desc">Offline & Online Translation: image translation, translation history, 
+                    file translation, bookmarks, dictionary meaning.
+                </h4>
                 <div class="ac">
                     <button class="btn"><span>Request a free trial</span></button>
                 </div>
             </article>
-            <article class="article">
+            <article class="article article_solution">
                 <h2>Our language solution</h2>
-                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                <h4 class="article__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
                 </h4>
                 <ul class="solution">
                     <li>
                         <a class="solution__item" href="">
                             <h3 class="solution__title">Translation</h3>
                             <p class="solution__desc">Unlimited and secure translation for fixed price. Translate billions of characters per day</p>
-                            <img class="solution__item" src="./img/icon_translation.svg" alt="">
+                            <img class="solution__pic" src="./img/icon_translation.svg" alt="">
                         </a>
                     </li>
                     <li>
                         <a class="solution__item" href="">
                             <h3 class="solution__title">Social listening</h3>
                             <p class="solution__desc">Unlimited and secure translation for fixed price. Translate billions of characters per day</p>
-                            <img class="solution__item" src="./img/icon_social.svg" alt="">
+                            <img class="solution__pic" src="./img/icon_social.svg" alt="">
                         </a>
                     </li>
                     <li>
                         <a class="solution__item" href="">
                             <h3 class="solution__title">Content generation</h3>
                             <p class="solution__desc">Unlimited and secure translation for fixed price. Translate billions of characters per day</p>
-                            <img class="solution__item" src="./img/icon_content.svg" alt="">
+                            <img class="solution__pic" src="./img/icon_content.svg" alt="">
                         </a>
                     </li>
                 </ul>
             </article>
             <article class="article">
                 <h2>Who is this product for?</h2>
-                <h4>Lingvanex Bot can simply solve a language barrier problem in your team, community, 
+                <h4 class="article__desc">Lingvanex Bot can simply solve a language barrier problem in your team, community, 
                     with your international clients and outsourcing partners. It automatically identifies the languages 
                     in a conversation and translates all messages of your team members into a chosen language.
                 </h4>
                 <div class="tab">
-                    <div class="tab__list">
-                        <span class="tab__btn">For travelers</span>
-                        <span class="tab__btn">For travel organization</span>
-                        <span class="tab__btn">For employees</span>
-                    </div>
+                    <ul class="tab__list">
+                        <li class="tab__btn act"><span>For travelers</span></li>
+                        <li class="tab__btn"><span>For travel organization</span></li>
+                        <li class="tab__btn"><span>For employees</span></li>
+                    </ul>
                     <div class="tab_content">
                         <div class="tab_item">
                             <div class="tab__desc">
@@ -104,7 +106,13 @@
                                 </ul>
                             </div>
                             <div class="tab__pic">
-                                <img src="./img/pic_traveler@1x.jpg" alt="">
+                                <picture>
+                                    <source type="image/webp" srcset="./img/pic_traveler@1x.webp 1x, ./img/pic_traveler@2x.webp 2x">
+                                    <img
+                                        src="./img/pic_traveler@1x.jpeg"
+                                        srcset="./img/pic_traveler@2x.jpeg 2x"
+                                        alt="">
+                                </picture>
                             </div>
                         </div>
                     </div>
