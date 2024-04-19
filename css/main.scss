@@ -170,6 +170,8 @@ header{
     right: 0;
     z-index: 100;
     transition: var(--transition);
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
     &.unvis {
         top: -140px;
     }

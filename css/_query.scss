@@ -88,19 +88,25 @@
     .article {
         padding: 40px 0 60px;
     }
-    header .container{
-        flex-direction: column;
-        justify-content: center;
-        gap: 8px;
-    }
-    header p strong {
-        font-size: 28px;
-    }
-    header p span{
-        text-align: center;
-    }
-    header ul li a {
-        font-size: 15px;
+    header{
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        .container{
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+        }
+        p{
+            strong {
+                font-size: 28px;
+            }
+            span{
+                text-align: center;
+            }
+        }
+        ul li a {
+            font-size: 15px;
+        }
     }
     .intro {
         padding-top: 80px;
