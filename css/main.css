@@ -172,7 +172,6 @@ body {
 
 header {
   background: #0146fe;
-  padding: 20px 0;
   color: #fff;
   height: 106px;
   position: fixed;
@@ -189,6 +188,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 header p {
   display: flex;
@@ -2164,7 +2164,63 @@ header ul li a:hover:before {
   }
 }
 @media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
   h1 {
     font-size: 60px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  .solution__title {
+    font-size: 30px;
+  }
+  .article_solution {
+    padding-bottom: 70px;
+  }
+  .tab__title {
+    font-size: 50px;
+  }
+  .tab__item {
+    grid-template: auto/1.8fr 1fr;
+  }
+  .tab__desc {
+    padding-right: 0;
+  }
+  .tab__content {
+    padding: 0;
+  }
+  .tab__content:after {
+    left: 40px;
+    right: 40px;
+  }
+  .tab__content::before {
+    left: 80px;
+    right: 80px;
+  }
+  .help {
+    width: 100%;
+    gap: 36px 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 48px;
+  }
+  .intro__desc {
+    max-width: 70%;
+  }
+  .btn {
+    height: 48px;
+    border-radius: 12px;
+    padding: 0 20px;
+  }
+  .btn span {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .article {
+    padding: 40px 0 60px;
   }
 }/*# sourceMappingURL=main.css.map */

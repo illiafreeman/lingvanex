@@ -162,7 +162,6 @@ body {
 }
 header{
     background: #0146fe;
-    padding: 20px 0;
     color: #fff;
     height: 106px;
     position: fixed;
@@ -178,6 +177,7 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 100%;
     }
     p{
         display: flex;
