@@ -37,9 +37,7 @@
 /*end header*/
 
 /*animation*/
-    if ($(window).width() >= 1025) {
-        new WOW().init();
-    }
+    new WOW().init();
 /*end animation*/
 
 
