@@ -55,10 +55,16 @@
     h1 {
         font-size: 48px;
     }
-    .intro__desc{
+    h2,.tab__title {
+        font-size: 38px;
+    }
+    .solution__title, .help__title {
+        font-size: 26px;
+    }
+    .intro__desc, .article__desc{
         max-width: 70%;
     }
-    .btn {
+    .btn, .tab__btn {
         height: 48px;
         border-radius: 12px;
         padding: 0 20px;
@@ -70,11 +76,23 @@
     .article {
         padding: 40px 0 60px;
     }
-
-
-
-
-
+    header .container{
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+    }
+    header p strong {
+        font-size: 28px;
+    }
+    header p span{
+        text-align: center;
+    }
+    header ul li a {
+        font-size: 15px;
+    }
+    .intro {
+        padding-top: 80px;
+    }
 
 
 
